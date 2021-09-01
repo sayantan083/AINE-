@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Sample page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .root {
+            display: grid;
+            grid-template-columns: 8% 92%;
+        }
+
+        .head {
+            padding: 40px 20px;
+            background-color: white;
+        }
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            box-shadow: 1px 0px 20px #888888;
+            z-index: 2;
+        }
+
+        .leftbox {
+            padding: 20px 6px;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            color: rgb(111, 172, 196);
+        }
+
+        .nav{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .selected {
+            background-color: rgb(104, 172, 235, 0.3);
+            font-weight: 700;
+            border-left: 2px solid blue;
+            color: black;
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            background-color: #eee;
+            height: 100vh;
+        }
+
+        .rightbox {
+            padding: 40px 30px;
+            font-weight: 700;
+        }
+
+        #lowerbox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input {
+            padding: 0.7rem;
+            border-style: hidden;
+            border-radius: 10px;
+            width: 70vw;
+        }
+
+        #upload {
+            border-radius: 7px;
+            background-color: white;
+            height: 23vh;
+            width: 13vw;
+            line-height: 120px;
+            text-align: center;
+            position: relative;
+            right: 385px;
+        }
+
+        .myfonts{
+            font-size: 20px;
+        }
+
+        .leftfont{
+            color: rgb(111, 172, 196);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="root">
+        <div class="left">
+            <div class="head"></div>
+            <div class="leftbox"><p class="nav"><i class="far fa-user myfonts"></i><span>Students</span></p></div>
+            <div class="leftbox selected"><p class="nav"><i class="fas fa-book myfonts"></i><span>Lesson Plan</span></p></div>
+            <div class="leftbox"><p class="nav"><i class="fas fa-cog myfonts"></i><span>Settings</span></p></div>
+        </div>
+        <div class="right">
+            <div class="head"></div>
+            <div class="rightbox"><i class="fas fa-caret-left leftfont"></i><span style="padding: 2px; color: rgb(111, 172, 196);">Videos</span></div>
+            <div class="rightbox" id="lowerbox">
+                <input placeholder="Insert URL here" />
+                <p>or</p>
+                <div id="upload">upload</div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"
+        integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg=="
+        crossorigin="anonymous"></script>
+</body>
